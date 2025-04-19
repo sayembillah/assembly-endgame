@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  background-color: #1e1e1e; /* matches bg in App.jsx */
+  color: #d9d9d9;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-family: "Inter", sans-serif; /* optional modern font */
+}
+
+#alphaButton {
+  background-color: #facc15; /* Tailwind: bg-yellow-400 */
+  color: #1e1e1e; /* Tailwind: text-black */
+  font-weight: 700; /* Tailwind: font-bold */
+  font-size: 1.125rem; /* Tailwind: text-lg */
+  height: 2.5rem; /* Tailwind: h-10 */
+  width: 2.5rem; /* Tailwind: w-10 */
+  border: 1px solid white;
+  border-radius: 0.5rem; /* Tailwind: rounded-md */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#alphaButton:hover {
+  background-color: #fbbf24; /* Tailwind: hover:bg-yellow-500 */
+  transform: translateY(-2px);
+}
+
+#alphaButton.correct {
+  background-color: #4ade80; /* Tailwind: bg-green-400 */
+  color: #1e1e1e;
+}
+
+#alphaButton.wrong {
+  background-color: #f87171; /* Tailwind: bg-red-400 */
+  color: white;
+}
+
+#alphaButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
